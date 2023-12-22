@@ -1,0 +1,23 @@
+@import '_gridscss';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; // chieu dai bao gom ca border
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.5s;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}

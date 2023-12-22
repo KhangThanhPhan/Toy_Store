@@ -1,0 +1,57 @@
+@import 'media';
+
+$cols: 12;
+$gutter: 20px; // khoang cach giua 2 item la 20px
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    //margin: -$gutter/2;
+    //for - from 1 to 13 => chay tu 1 den 12 
+
+    @for $i from 1 through $cols {
+        .col-xs-#{$i} {
+            @include xs() {
+                width: (100%/$cols)*$i;
+                padding: $gutter/2;
+            }
+        }
+
+        .col-sm-#{$i} {
+            @include sm() {
+                width: (100%/$cols)*$i;
+                padding: $gutter/2;
+            }
+        }
+
+        .col-md-#{$i} {
+            @include md() {
+                width: (100%/$cols)*$i;
+                padding: $gutter/2;
+            }
+        }
+
+        .col-lg-#{$i} {
+            @include lg() {
+                width: (100%/$cols)*$i;
+                padding: $gutter/2;
+            }
+        }
+
+        .col-xl-#{$i} {
+            @include xl() {
+                width: (100%/$cols)*$i;
+                padding: $gutter/2;
+            }
+        }
+    }
+
+    // col-sm-3 col-md-6 col-lg-4 col-xs-12
+    // xs < 576px
+    // sm > 576px
+    // md > 768px
+    // lg > 992px
+    // xl > 1140px
+}
